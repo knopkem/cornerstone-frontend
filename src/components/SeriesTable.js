@@ -1,7 +1,6 @@
 import React from 'react';
 import SeriesItem from './seriesItem';
 import DicomViewer from './dicomViewer';
-import ExamplePageBasic from './ExampleBasic';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Config } from '../config';
@@ -32,7 +31,6 @@ export default function SeriesTable(props) {
   const [localState, setLocalState] = React.useState(initialState);
 
   React.useEffect(() => {
-
     const find = (value) => {
       console.log('running qido query');
       const query = `${Config.hostname}:${Config.port}/${Config.qido}/studies/${value}/series`;
@@ -84,14 +82,7 @@ export default function SeriesTable(props) {
           ))}
         </Grid>
       </div>
-      <div style={{ flex: 1 }}>
-        {localState.loaded &&
-          (localState.selectionMpr ? (
-            <ExamplePageBasic/>
-          ) : (
-            <DicomViewer studyUid={localState.studyUid} seriesUid={localState.seriesUid} />
-          ))}
-      </div>
+      <div style={{ flex: 1 }}>{localState.loaded && <DicomViewer studyUid={localState.studyUid} seriesUid={localState.seriesUid} />}</div>
     </div>
   );
 }
