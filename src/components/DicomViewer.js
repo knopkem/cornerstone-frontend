@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CornerstoneViewport from 'react-cornerstone-viewport';
+import CornerstoneViewport from '../Viewport/CornerstoneViewport/CornerstoneViewport';
 import { Config } from '../config';
 import { __get } from '../utils';
 

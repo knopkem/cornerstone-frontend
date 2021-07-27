@@ -31,7 +31,8 @@ module.exports = (env, argv) => {
         ]
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.css$/,
+        exclude: /\.module\.css$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
