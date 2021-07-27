@@ -6,14 +6,14 @@ import { __get } from '../utils';
 
 export default function StudyTable() {
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'patientName', headerName: 'Patient name', width: 130 },
-    { field: 'patientId', headerName: 'MRN', width: 130 },
-    { field: 'accession', headerName: 'Accession', width: 90 },
-    { field: 'studyDate', headerName: 'Study date', width: 130 },
-    { field: 'modality', headerName: 'Modality', width: 70 },
-    { field: 'studyDescription', headerName: 'Study description', width: 130 },
-    { field: 'uid', headerName: 'Study UID', width: 280 },
+    { field: 'id', headerName: 'ID', width: 30 },
+    { field: 'patientName', headerName: 'Patient name', width: 250 },
+    { field: 'patientId', headerName: 'MRN', width: 150 },
+    { field: 'accession', headerName: 'Accession', width: 170 },
+    { field: 'studyDate', headerName: 'Study date', width: 170 },
+    { field: 'modality', headerName: 'Modality', width: 170 },
+    { field: 'studyDescription', headerName: 'Study description', width: 200 },
+    { field: 'uid', headerName: 'Study UID', width: 350 },
   ];
 
   const history = useHistory();

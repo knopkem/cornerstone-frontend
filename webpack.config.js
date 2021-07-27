@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
   const config = {
   entry,
   devtool: false,
+  cache: false,
   mode: 'development',
   module: {
 
